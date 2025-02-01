@@ -9,15 +9,14 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './vehiculo-form.component.scss'
 })
 export class VehiculoFormComponent {
-  cocheImg = '/coche.png';
-  motoImg = '/moto.png';
+
   @Output() onVehiculoAgregar = new EventEmitter<Vehiculo>();
 
   nombre: string = '';
   tipo: 'Coche' | 'Moto' = 'Coche';
 
   agregarVehiculo() {
-    if (!this.nombre.trim()) return; 
+    if (!this.nombre.trim()) return;
 
     this.onVehiculoAgregar.emit({
       nombre: this.nombre,
@@ -25,7 +24,7 @@ export class VehiculoFormComponent {
       favorito: false
     });
 
-    this.nombre = ''; 
+    this.nombre = '';
     this.tipo = 'Coche';
   }
 
