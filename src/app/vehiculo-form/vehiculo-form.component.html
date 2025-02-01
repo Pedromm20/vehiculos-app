@@ -1,0 +1,16 @@
+<div class="formulario">
+    <input type="text" [(ngModel)]="nombre" placeholder="Nombre del vehículo"/>
+  
+    <div class="botones">
+      <button (click)="tipo = 'Coche'" [class.selected]="tipo === 'Coche'">
+        <img [src]="cocheImg" alt="Coche" width="60" height="60">
+    </button>
+      <button (click)="tipo = 'Moto'" [class.selected]="tipo === 'Moto'">
+        <img [src]="motoImg" alt="Moto" width="60" height="60">      </button>
+    </div>
+  
+    <div class="acciones">
+      <button (click)="nombre = ''" class="borrar">❌</button>
+      <button (click)="agregarVehiculo()" class="guardar">✔</button>
+    </div>
+  </div>

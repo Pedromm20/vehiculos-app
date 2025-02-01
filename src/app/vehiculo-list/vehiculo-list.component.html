@@ -1,0 +1,10 @@
+<div class="lista">
+    <ul>
+      <li *ngFor="let vehiculo of vehiculos">
+        <span class="nombre" [class.favorito]="vehiculo.favorito">{{ vehiculo.nombre }}</span> | {{ vehiculo.tipo }}
+        <button (click)="eliminar(vehiculo.nombre)" class="eliminar-btn">❌</button>
+        <button (click)="toggleFavorito(vehiculo.nombre)" class="favorito-btn">⭐</button>
+      </li>
+    </ul>
+  </div>
+  

@@ -1,1 +1,128 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f8f8;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  .contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .formulario {
+    background: #e0f7fa;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #009688;
+  }
+  
+  input {
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 2px solid #009688;
+    border-radius: 5px;
+  }
+  
+  .botones {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .botones button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .botones img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .botones .selected {
+    border: 3px solid blue;
+  }
+  
+  .acciones {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .borrar {
+    background: red;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .guardar {
+    background: green;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .lista {
+    background: #fff3e0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    border: 2px solid #ff9800;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 2px solid #ffcc80;
+  }
+  
+  .nombre {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .favorito {
+    color: yellow;
+  }
+  
+  .favorito-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .eliminar-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: red;
+  }
+  
