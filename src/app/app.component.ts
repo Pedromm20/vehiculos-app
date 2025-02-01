@@ -18,7 +18,7 @@ export class AppComponent {
   vehiculos: Vehiculo[] = [];
 
   agregarVehiculo(nuevoVehiculo: Vehiculo) {
-    console.log('Vehículo agregado:', nuevoVehiculo); // <-- Verifica en la consola
+    console.log('Vehículo agregado:', nuevoVehiculo); 
     this.vehiculos.push(nuevoVehiculo);
     this.vehiculos.sort((a, b) => a.nombre.localeCompare(b.nombre));
   }
