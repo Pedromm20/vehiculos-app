@@ -1,59 +1,74 @@
-# VehiculosApp
+# Comandos Utilizados en la Práctica de Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.7.
+Este documento contiene los comandos utilizados durante la práctica, junto con su explicación.
 
-## Development server
+## 1️⃣ Crear un nuevo proyecto de Angular
+```sh
+ng new vehiculos-app
+cd vehiculos-app
+```
+Crea un nuevo proyecto en Angular y entra en su directorio.
 
-To start a local development server, run:
+## 2️⃣ Instalar dependencias necesarias
+```sh
+npm install
+```
+Instala todas las dependencias requeridas por el proyecto.
 
-```bash
+## 3️⃣ Ejecutar el servidor de Angular
+```sh
 ng serve
 ```
+Inicia el servidor de desarrollo de Angular y permite ver la aplicación en el navegador.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+## 4️⃣ Crear Componentes
+```sh
+ng generate component components/vehiculo-form
+ng generate component components/vehiculo-list
 ```
+Genera los componentes necesarios para el formulario y la lista de vehículos.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
+## 5️⃣ Configurar `angular.json` para servir imágenes desde `public/`
+```json
+"assets": [
+  {
+    "glob": "**/*",
+    "input": "public"
+  }
+]
 ```
+Configura Angular para que sirva imágenes desde la carpeta `public/`.
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
+## 6️⃣ Mover las imágenes a la carpeta `public/`
+```sh
+mv coche.png moto.png public/
 ```
+Mueve las imágenes de `coche.png` y `moto.png` a la carpeta `public/`.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+## 7️⃣ Forzar recarga del navegador para aplicar cambios
 ```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
+Ctrl + Shift + R
 ```
+Recarga la página sin usar caché para ver los cambios recientes.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 8️⃣ Revisar si las imágenes se están cargando correctamente
+```sh
+http://localhost:4200/coche.png
+http://localhost:4200/moto.png
+```
+Prueba si las imágenes se están sirviendo correctamente desde `public/`.
 
-## Additional Resources
+## 9️⃣ Limpiar y reinstalar dependencias en caso de errores
+```sh
+rm -rf node_modules package-lock.json
+npm install
+ng serve
+```
+Elimina `node_modules`, reinstala las dependencias y reinicia el servidor de Angular.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 🔟 Construir la aplicación para producción
+```sh
+ng build --configuration=production
+```
+Genera la versión optimizada del proyecto en la carpeta `dist/vehiculos-app/`.
+
